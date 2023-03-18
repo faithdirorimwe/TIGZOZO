@@ -1,0 +1,2149 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: var(--secondary-color);
+}
+
+:root {
+  --primary-color: #000106;
+  --secondary-color: #fff;
+  --shadow: 0px 7px 13px rgba(59, 58, 58, 0.1);
+  --background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.057),
+    rgba(255, 255, 255, 0.947));
+}
+
+.dark-theme {
+  --primary-color: #fff;
+  --secondary-color: #000106;
+  --shadow: 0px 7px 13px rgba(255, 255, 255, 0.179);
+  --background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.057),
+    rgba(0, 0, 0, 0.947));
+}
+
+@media (min-width: 1200px) {
+  .banner-small {
+    display: none;
+  }
+  .about-small {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    font-family: "josefinsanssemibold";
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+  }
+  .navbar a {
+    color: var(--primary-color);
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .navbar a:hover {
+    color: #742296;
+  }
+  .navbar #icon {
+    width: 20px;
+    cursor: pointer;
+  }
+  #banner {
+    width: 100%;
+    margin-top: 200px;
+  }
+  #banner .banner-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  #banner .banner-inner .h1 {
+    font-size: 40px;
+    margin-top: 59px;
+  }
+  #banner .banner-inner p {
+    font-family: "josefinsanssemibold";
+    font-size: 20px;
+    line-height: 28px;
+  }
+  #banner .banner-inner .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #banner .banner-inner .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #banner .banner-inner .home-links {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  #banner .banner-inner .home-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-left: 5px;
+    font-family: "josefinsanslight";
+  }
+  #banner .banner-inner .home-links a:hover {
+    color: #742296;
+  }
+  #banner .banner-inner .images img {
+    width: 23%;
+  }
+  #banner .banner-inner .images .one {
+    padding-bottom: 20px;
+  }
+  #banner .banner-inner .images .two {
+    margin-bottom: 70px;
+  }
+  #about {
+    width: 100%;
+    margin-top: 200px;
+  }
+  #about .about-inner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  #about .about-inner .inner {
+    padding-left: 40px;
+  }
+  #about .about-inner h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #about .about-inner p {
+    font-family: "josefinsansregular";
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+  #about .about-inner .images {
+    margin-top: 40px;
+  }
+  #about .about-inner .images .two {
+    padding-top: 135px;
+  }
+  #about .about-inner .images img {
+    width: 100%;
+  }
+  #about .about-inner .image-one {
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 60vh;
+  }
+  #about .about-inner .image-one .overlay {
+    background-color: rgba(0, 0, 0, 0.3333333333);
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #about .about-inner .image-one .overlay img {
+    width: 50px;
+  }
+  #about .about-inner .text {
+    padding-top: 50px;
+  }
+  #about .about-inner .text-one {
+    padding-top: 20px;
+  }
+  #about .about-inner .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #about .about-inner .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #services {
+    width: 100%;
+    margin-top: 200px;
+  }
+  #services h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #services .services-inner {
+    height: 100vh;
+    padding-top: 120px;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  #services .services-inner .img-inner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    margin-top: 40px;
+  }
+  #services .services-inner .img-inner img {
+    background-color: #742296;
+    border: 5px solid #742296;
+  }
+  #services .services-inner .img-inner .one {
+    background-image: url(../img/service.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 70vh;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  #services .services-inner .img-inner .two {
+    background-image: url(../img/service.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 70vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  #services .services-inner .img-inner .three {
+    background-image: url(../img/service\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 70vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+  }
+  #services .services-inner .overlay {
+    background-image: linear-gradient(rgba(18, 4, 4, 0), #000000);
+    width: 100%;
+    height: 70vh;
+  }
+  #services .services-inner .overlay img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #services .services-inner .overlay h3 {
+    padding-top: 570px;
+  }
+  #services .services-inner .overlay .icon {
+    display: flex;
+    justify-content: end;
+  }
+  #services .services-inner .overlay .icon img {
+    border: 2px solid #742296;
+    background-color: #742296;
+    margin-bottom: 40px;
+  }
+  #services .services-inner .overlay .over {
+    background-color: #742296;
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: all 0.5s ease-out;
+  }
+  #services .services-inner .overlay .over ul {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 30px;
+    line-height: 51px;
+    font-family: "josefinsansregular";
+  }
+  #services .services-inner .overlay .over ul h4 {
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: "josefinsanssemibold";
+  }
+  #services .services-inner .overlay .over.show {
+    right: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  #testimonials {
+    width: 100%;
+    margin-top: 200px;
+  }
+  #testimonials h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #testimonials .testimonials-inner {
+    height: 100vh;
+    font-family: "josefinsanslight";
+    color: var(--primary-color);
+  }
+  #testimonials .testimonials-inner .testimony {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    gap: 30px;
+  }
+  #testimonials .testimonials-inner .testimony h4 {
+    font-family: "josefinsanssemibold";
+    font-size: 25px;
+    margin-top: 20px;
+  }
+  #testimonials .testimonials-inner .testimony h5 {
+    font-family: "josefinsansregular";
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  #testimonials .testimonials-inner .testimony p {
+    font-family: "josefinsansregular";
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+  #testimonials .testimonials-inner .testimony .img-arrow {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 490px;
+  }
+  #testimonials .testimonials-inner .testimony .img-arrow img {
+    border: 2px solid #742296;
+    background: #742296;
+  }
+  #testimonials .testimonials-inner .testimony .inner {
+    background-image: url(../img/testimonials.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 60vh;
+  }
+  #testimonials .testimonials-inner .testimony .inner-one {
+    margin-top: -130px;
+    background-image: url(../img/testimonials\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 60vh;
+  }
+  #gallery {
+    width: 100%;
+    height: 100vh;
+    margin-top: 200px;
+  }
+  #gallery .gallery-inner {
+    color: var(--primary-color);
+  }
+  #gallery .gallery-inner .images {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  #gallery .gallery-inner .images .two {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images .four {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images .six {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images img {
+    height: 35vh;
+    width: 100%;
+  }
+  #gallery .gallery-inner h4 {
+    font-family: "josefinsansbold";
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444);
+  }
+  #gallery .gallery-inner h4 span {
+    font-family: "greatvibes";
+    font-size: 38px;
+  }
+  #gallery .gallery-inner p {
+    font-family: "josefinsanssemibold";
+    text-align: center;
+    padding-top: 50px;
+  }
+  #gallery .gallery-inner .bn {
+    text-align: center;
+  }
+  #gallery .gallery-inner .bn .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #gallery .gallery-inner .bn .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #footer {
+    width: 100%;
+    font-family: "josefinsansregular";
+    background-color: #742296;
+  }
+  #footer .footer-inner {
+    color: white;
+  }
+  #footer .footer-inner .inner {
+    margin-top: 30px;
+  }
+  #footer .footer-inner ul h4 {
+    text-decoration: underline;
+  }
+  #footer .footer-inner ul li {
+    line-height: 35px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .banner-small {
+    display: none;
+  }
+  .about-small {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    font-family: "josefinsanssemibold";
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+  }
+  .navbar a {
+    color: var(--primary-color);
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .navbar a:hover {
+    color: #742296;
+  }
+  .navbar #icon {
+    width: 20px;
+    cursor: pointer;
+  }
+  #banner {
+    width: 100%;
+    margin-top: 150px;
+  }
+  #banner .banner-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  #banner .banner-inner .h1 {
+    font-size: 38px;
+    margin-top: 38px;
+  }
+  #banner .banner-inner p {
+    font-family: "josefinsanssemibold";
+    font-size: 20px;
+    line-height: 26px;
+  }
+  #banner .banner-inner .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #banner .banner-inner .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #banner .banner-inner .home-links {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  #banner .banner-inner .home-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-left: 5px;
+    font-family: "josefinsanslight";
+  }
+  #banner .banner-inner .home-links a:hover {
+    color: #742296;
+  }
+  #banner .banner-inner .images img {
+    width: 23%;
+  }
+  #banner .banner-inner .images .one {
+    padding-bottom: 20px;
+  }
+  #banner .banner-inner .images .two {
+    margin-bottom: 70px;
+  }
+  #about {
+    width: 100%;
+    margin-top: 150px;
+  }
+  #about .about-inner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  #about .about-inner .inner {
+    padding-left: 30px;
+  }
+  #about .about-inner h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #about .about-inner p {
+    font-family: "josefinsansregular";
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+  #about .about-inner .images {
+    margin-top: 40px;
+  }
+  #about .about-inner .images .two {
+    padding-top: 83px;
+  }
+  #about .about-inner .images img {
+    width: 100%;
+  }
+  #about .about-inner .image-one {
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 50vh;
+  }
+  #about .about-inner .image-one .overlay {
+    background-color: rgba(0, 0, 0, 0.3333333333);
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #about .about-inner .image-one .overlay img {
+    width: 50px;
+  }
+  #about .about-inner .text {
+    padding-top: 50px;
+  }
+  #about .about-inner .text-one {
+    padding-top: 20px;
+  }
+  #about .about-inner .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #about .about-inner .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #services {
+    width: 100%;
+    margin-top: 60px;
+  }
+  #services h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #services .services-inner {
+    height: 100vh;
+    padding-top: 120px;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  #services .services-inner .img-inner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    margin-top: 40px;
+  }
+  #services .services-inner .img-inner img {
+    background-color: #742296;
+    border: 5px solid #742296;
+  }
+  #services .services-inner .img-inner .one {
+    background-image: url(../img/service.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 70vh;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  #services .services-inner .img-inner .two {
+    background-image: url(../img/service.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 70vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  #services .services-inner .img-inner .three {
+    background-image: url(../img/service\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 70vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+  }
+  #services .services-inner .overlay {
+    background-image: linear-gradient(rgba(18, 4, 4, 0), #000000);
+    width: 100%;
+    height: 70vh;
+  }
+  #services .services-inner .overlay img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #services .services-inner .overlay h3 {
+    padding-top: 576px;
+  }
+  #services .services-inner .overlay .icon {
+    display: flex;
+    justify-content: end;
+  }
+  #services .services-inner .overlay .icon img {
+    border: 2px solid #742296;
+    background-color: #742296;
+    margin-bottom: 40px;
+  }
+  #services .services-inner .overlay .over {
+    background-color: #742296;
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: all 0.5s ease-out;
+  }
+  #services .services-inner .overlay .over ul {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 30px;
+    line-height: 51px;
+    font-family: "josefinsansregular";
+  }
+  #services .services-inner .overlay .over ul h4 {
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: "josefinsanssemibold";
+  }
+  #services .services-inner .overlay .over.show {
+    right: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  #testimonials {
+    width: 100%;
+    margin-top: 150px;
+  }
+  #testimonials h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #testimonials .testimonials-inner {
+    font-family: "josefinsanslight";
+    color: var(--primary-color);
+  }
+  #testimonials .testimonials-inner .testimony {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    gap: 30px;
+  }
+  #testimonials .testimonials-inner .testimony h4 {
+    font-family: "josefinsanssemibold";
+    font-size: 25px;
+    margin-top: 20px;
+  }
+  #testimonials .testimonials-inner .testimony h5 {
+    font-family: "josefinsansregular";
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  #testimonials .testimonials-inner .testimony p {
+    font-family: "josefinsansregular";
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+  #testimonials .testimonials-inner .testimony .img-arrow {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 499px;
+  }
+  #testimonials .testimonials-inner .testimony .img-arrow img {
+    border: 2px solid #742296;
+    background: #742296;
+  }
+  #testimonials .testimonials-inner .testimony .inner {
+    background-image: url(../img/testimonials.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 60vh;
+  }
+  #testimonials .testimonials-inner .testimony .inner-one {
+    margin-top: -169px;
+    background-image: url(../img/testimonials\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 60vh;
+  }
+  #gallery {
+    width: 100%;
+    margin-top: 400px;
+  }
+  #gallery .gallery-inner {
+    color: var(--primary-color);
+  }
+  #gallery .gallery-inner .images {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  #gallery .gallery-inner .images .two {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images .four {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images .six {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images img {
+    height: 35vh;
+    width: 100%;
+  }
+  #gallery .gallery-inner h4 {
+    font-family: "josefinsansbold";
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444);
+  }
+  #gallery .gallery-inner h4 span {
+    font-family: "greatvibes";
+    font-size: 38px;
+  }
+  #gallery .gallery-inner p {
+    font-family: "josefinsanssemibold";
+    text-align: center;
+    padding-top: 50px;
+  }
+  #gallery .gallery-inner .bn {
+    text-align: center;
+  }
+  #gallery .gallery-inner .bn .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #gallery .gallery-inner .bn .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #footer {
+    width: 100%;
+    margin-top: 60px;
+    font-family: "josefinsansregular";
+    background-color: #742296;
+    color: #fff;
+  }
+  #footer .footer-inner .inner {
+    margin-top: 30px;
+  }
+  #footer .footer-inner ul h4 {
+    text-decoration: underline;
+  }
+  #footer .footer-inner ul li {
+    line-height: 35px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner-small {
+    display: none;
+  }
+  .about-small {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    font-family: "josefinsanssemibold";
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+  }
+  .navbar a {
+    color: black;
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--primary-color);
+  }
+  .navbar a:hover {
+    color: #742296;
+  }
+  .navbar #icon {
+    width: 20px;
+    cursor: pointer;
+  }
+  #banner {
+    width: 100%;
+    margin-top: 150px;
+  }
+  #banner .banner-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  #banner .banner-inner .h1 {
+    font-size: 28px;
+    margin-top: 42px;
+  }
+  #banner .banner-inner p {
+    font-family: "josefinsanssemibold";
+    font-size: 20px;
+    line-height: 30px;
+    width: 100%;
+  }
+  #banner .banner-inner .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #banner .banner-inner .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #banner .banner-inner .home-links {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+  #banner .banner-inner .home-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-left: 5px;
+    font-family: "josefinsanslight";
+  }
+  #banner .banner-inner .home-links a:hover {
+    color: #742296;
+  }
+  #banner .banner-inner p:hover {
+    color: #742296;
+  }
+  #banner .banner-inner .images {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+  }
+  #banner .banner-inner .images img {
+    width: 40%;
+  }
+  #banner .banner-inner .images .two {
+    display: none;
+  }
+  #about {
+    width: 100%;
+    margin-top: 150px;
+  }
+  #about .about-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "josefinsansbold";
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  #about .about-inner .inner {
+    margin-left: 40px;
+  }
+  #about .about-inner h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #about .about-inner p {
+    font-family: "josefinsansregular";
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+  #about .about-inner .images {
+    margin-top: 40px;
+  }
+  #about .about-inner .images .two {
+    padding-top: 57px;
+  }
+  #about .about-inner .images img {
+    width: 100%;
+  }
+  #about .about-inner .image-one {
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 29vh;
+    margin-top: 50px;
+  }
+  #about .about-inner .image-one .overlay {
+    background-color: rgba(0, 0, 0, 0.3333333333);
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #about .about-inner .image-one .overlay img {
+    width: 50px;
+  }
+  #about .about-inner .text {
+    padding-top: 50px;
+  }
+  #about .about-inner .text-one {
+    padding-top: 20px;
+  }
+  #about .about-inner .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #about .about-inner .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #services {
+    width: 100%;
+    margin-top: 80px;
+  }
+  #services h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #services .services-inner {
+    padding-top: 120px;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  #services .services-inner .img-inner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    margin-top: 40px;
+  }
+  #services .services-inner .img-inner img {
+    background-color: #742296;
+    border: 5px solid #742296;
+    width: 10%;
+  }
+  #services .services-inner .img-inner .one {
+    background-image: url(../img/service.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 35%;
+    height: 50vh;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  #services .services-inner .img-inner .two {
+    background-image: url(../img/service.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 35%;
+    height: 50vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  #services .services-inner .img-inner .three {
+    background-image: url(../img/service\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 35%;
+    height: 50vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+  }
+  #services .services-inner .overlay {
+    background-image: linear-gradient(rgba(18, 4, 4, 0), #000000);
+    width: 100%;
+    height: 50vh;
+  }
+  #services .services-inner .overlay img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #services .services-inner .overlay h3 {
+    font-size: 20px;
+    padding-top: 482px;
+  }
+  #services .services-inner .overlay .icon {
+    display: flex;
+    justify-content: end;
+  }
+  #services .services-inner .overlay .icon img {
+    border: 2px solid #742296;
+    background-color: #742296;
+    margin-bottom: 40px;
+  }
+  #services .services-inner .overlay .over {
+    background-color: #742296;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: all 0.5s ease-out;
+  }
+  #services .services-inner .overlay .over ul {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    line-height: 43px;
+    font-family: "josefinsansregular";
+  }
+  #services .services-inner .overlay .over ul h4 {
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: "josefinsanssemibold";
+  }
+  #services .services-inner .overlay .over.show {
+    right: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  #testimonials {
+    width: 100%;
+    margin-top: 180px;
+  }
+  #testimonials h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #testimonials .testimonials-inner {
+    height: 100vh;
+    font-family: "josefinsanslight";
+    color: var(--primary-color);
+  }
+  #testimonials .testimonials-inner .testimony {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 60px;
+    gap: 30px;
+  }
+  #testimonials .testimonials-inner .testimony h4 {
+    font-family: "josefinsanssemibold";
+    font-size: 25px;
+    margin-top: -58px;
+  }
+  #testimonials .testimonials-inner .testimony h5 {
+    font-family: "josefinsansregular";
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  #testimonials .testimonials-inner .testimony p {
+    font-family: "josefinsansregular";
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+  #testimonials .testimonials-inner .testimony .img-arrow {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 571px;
+  }
+  #testimonials .testimonials-inner .testimony .img-arrow img {
+    border: 11px solid #742296;
+    background: #742296;
+  }
+  #testimonials .testimonials-inner .testimony .inner {
+    background-image: url(../img/testimonials.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+  }
+  #testimonials .testimonials-inner .testimony .inner .img-arrow {
+    padding-top: 367px;
+  }
+  #testimonials .testimonials-inner .testimony .inner-one {
+    margin-top: 181px;
+    background-image: url(../img/testimonials\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+  }
+  #testimonials .testimonials-inner .testimony .inner-one h4 {
+    margin-top: 40px;
+  }
+  #gallery {
+    width: 100%;
+    margin-top: 700px;
+  }
+  #gallery .gallery-inner {
+    color: var(--primary-color);
+  }
+  #gallery .gallery-inner .images {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+    margin-top: 50px;
+  }
+  #gallery .gallery-inner .images .two {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images .four {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images .one {
+    display: none;
+  }
+  #gallery .gallery-inner .images .six {
+    display: none;
+  }
+  #gallery .gallery-inner .images img {
+    height: 30vh;
+    width: 120px;
+  }
+  #gallery .gallery-inner h4 {
+    font-family: "josefinsansbold";
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444);
+  }
+  #gallery .gallery-inner h4 span {
+    font-family: "greatvibes";
+    font-size: 38px;
+  }
+  #gallery .gallery-inner p {
+    font-family: "josefinsanssemibold";
+    text-align: center;
+    padding-top: 50px;
+  }
+  #gallery .gallery-inner .bn {
+    text-align: center;
+  }
+  #gallery .gallery-inner .bn .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #gallery .gallery-inner .bn .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #footer {
+    width: 100%;
+    margin-top: 40px;
+    font-family: "josefinsansregular";
+    background-color: #742296;
+    color: #fff;
+  }
+  #footer .footer-inner .inner {
+    margin-top: 30px;
+  }
+  #footer .footer-inner img {
+    width: 120px;
+  }
+  #footer .footer-inner ul h4 {
+    text-decoration: underline;
+    font-size: 20px;
+  }
+  #footer .footer-inner ul li {
+    line-height: 30px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  #about {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    font-family: "josefinsanssemibold";
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+  }
+  .navbar a {
+    color: black;
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--primary-color);
+  }
+  .navbar a:hover {
+    color: #742296;
+  }
+  .navbar #icon {
+    width: 15px;
+    cursor: pointer;
+  }
+  #banner {
+    display: none;
+  }
+  .banner-small {
+    width: 100%;
+    margin-top: 30px;
+    background: var(--background), url(../img/hero\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+  }
+  .banner-small .banner-inner {
+    height: 100%;
+  }
+  .banner-small .banner-inner .banner {
+    height: 100%;
+  }
+  .banner-small .inner {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+  }
+  .banner-small .inner .h1 {
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: "josefinsansbold";
+  }
+  .banner-small .inner p {
+    font-family: "josefinsanssemibold";
+    font-size: 16px;
+    line-height: 30px;
+    width: 80%;
+  }
+  .banner-small .inner .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  .banner-small .inner .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  .banner-small .inner .home-links {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+  .banner-small .inner .home-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-left: 5px;
+    font-family: "josefinsanslight";
+  }
+  .banner-small .inner .home-links a:hover {
+    color: #742296;
+  }
+  .about-small {
+    width: 100%;
+    margin-top: 100px;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  .about-small .inner {
+    padding-top: 40px;
+  }
+  .about-small p {
+    font-family: "josefinsansregular";
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+  .about-small .image-one {
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+  }
+  .about-small .image-one .overlay {
+    background-color: rgba(0, 0, 0, 0.3333333333);
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-small .text-one {
+    padding-top: 30px;
+  }
+  .about-small .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  .about-small .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #services {
+    width: 100%;
+    margin-top: 60px;
+  }
+  #services h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #services .services-inner {
+    padding-top: 120px;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  #services .services-inner .img-inner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    margin-top: 40px;
+  }
+  #services .services-inner .img-inner img {
+    background-color: #742296;
+    border: 2px solid #742296;
+  }
+  #services .services-inner .img-inner .one {
+    background-image: url(../img/service.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50vh;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  #services .services-inner .img-inner .two {
+    background-image: url(../img/service.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  #services .services-inner .img-inner .three {
+    background-image: url(../img/service\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+  }
+  #services .services-inner .overlay {
+    background-image: linear-gradient(rgba(18, 4, 4, 0), #000000);
+    width: 100%;
+    height: 50vh;
+  }
+  #services .services-inner .overlay img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #services .services-inner .overlay h3 {
+    padding-top: 359px;
+    font-size: 15px;
+  }
+  #services .services-inner .overlay .icon {
+    display: flex;
+    justify-content: end;
+  }
+  #services .services-inner .overlay .icon img {
+    border: 2px solid #742296;
+    background-color: #742296;
+    margin-bottom: 40px;
+  }
+  #services .services-inner .overlay .over {
+    background-color: #742296;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: all 0.5s ease-out;
+  }
+  #services .services-inner .overlay .over ul {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 30px;
+    line-height: 23px;
+    font-size: 15px;
+    font-family: "josefinsansregular";
+  }
+  #services .services-inner .overlay .over ul h4 {
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: "josefinsanssemibold";
+  }
+  #services .services-inner .overlay .over.show {
+    right: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  #testimonials {
+    width: 100%;
+    margin-top: 120px;
+  }
+  #testimonials h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #testimonials .testimonials-inner {
+    font-family: "josefinsanslight";
+    color: var(--primary-color);
+  }
+  #testimonials .testimonials-inner .testimony {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
+    gap: 30px;
+  }
+  #testimonials .testimonials-inner .testimony h4 {
+    font-family: "josefinsanssemibold";
+    font-size: 25px;
+    margin-top: 70px;
+  }
+  #testimonials .testimonials-inner .testimony h5 {
+    font-family: "josefinsansregular";
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  #testimonials .testimonials-inner .testimony p {
+    font-family: "josefinsansregular";
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+  #testimonials .testimonials-inner .testimony .img-arrow {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 483px;
+  }
+  #testimonials .testimonials-inner .testimony .img-arrow img {
+    border: 2px solid #742296;
+    background: #742296;
+  }
+  #testimonials .testimonials-inner .testimony .inner {
+    background-image: url(../img/testimonials.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 65vh;
+  }
+  #testimonials .testimonials-inner .testimony .inner-one {
+    display: none;
+  }
+  #gallery {
+    width: 100%;
+    margin-top: 300px;
+  }
+  #gallery .gallery-inner {
+    color: var(--primary-color);
+  }
+  #gallery .gallery-inner .images {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 3px;
+    margin-top: 40px;
+  }
+  #gallery .gallery-inner .images .two {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images .four {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images .one {
+    display: none;
+  }
+  #gallery .gallery-inner .images .six {
+    display: none;
+  }
+  #gallery .gallery-inner .images img {
+    height: 30vh;
+    width: 120px;
+  }
+  #gallery .gallery-inner h4 {
+    font-family: "josefinsansbold";
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444);
+  }
+  #gallery .gallery-inner h4 span {
+    font-family: "greatvibes";
+    font-size: 38px;
+  }
+  #gallery .gallery-inner p {
+    font-family: "josefinsanssemibold";
+    text-align: center;
+    padding-top: 50px;
+  }
+  #gallery .gallery-inner .bn {
+    text-align: center;
+  }
+  #gallery .gallery-inner .bn .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #gallery .gallery-inner .bn .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #footer {
+    width: 100%;
+    margin-top: 60px;
+    font-family: "josefinsansregular";
+    background-color: #742296;
+    color: #fff;
+  }
+  #footer .footer-inner .inner {
+    margin-top: 40px;
+    display: flex;
+    flex-flow: column;
+  }
+  #footer .footer-inner ul h4 {
+    text-decoration: underline;
+  }
+  #footer .footer-inner ul li {
+    line-height: 35px;
+    font-size: 18px;
+  }
+  #footer .footer-inner ul li img {
+    width: 150px;
+  }
+}
+@media (max-width: 575px) {
+  #about {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    font-family: "josefinsanssemibold";
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+  }
+  .navbar .menuu {
+    background-color: var(--primary-color);
+  }
+  .navbar a {
+    color: #000;
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--primary-color);
+  }
+  .navbar a:hover {
+    color: #742296;
+  }
+  .navbar #icon {
+    width: 15px;
+    cursor: pointer;
+  }
+  #banner {
+    display: none;
+  }
+  .banner-small {
+    width: 100%;
+    margin-top: 83px;
+    background: var(--background), url(../img/hero\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+  }
+  .banner-small .banner-inner {
+    height: 100%;
+  }
+  .banner-small .banner-inner .banner {
+    height: 100%;
+  }
+  .banner-small .inner {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+  }
+  .banner-small .inner .h1 {
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: "josefinsansbold";
+  }
+  .banner-small .inner p {
+    font-family: "josefinsanssemibold";
+    font-size: 20px;
+    line-height: 30px;
+    width: 80%;
+  }
+  .banner-small .inner .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  .banner-small .inner .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  .banner-small .inner .home-links {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+  .banner-small .inner .home-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-left: 5px;
+    font-family: "josefinsanslight";
+  }
+  .banner-small .inner .home-links a:hover {
+    color: #742296;
+  }
+  .about-small {
+    width: 100%;
+    margin-top: 100px;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  .about-small p {
+    font-family: "josefinsansregular";
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+  .about-small .image-one {
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+    margin-top: 45px;
+  }
+  .about-small .image-one .overlay {
+    background-color: rgba(0, 0, 0, 0.3333333333);
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-small .text-one {
+    padding-top: 30px;
+  }
+  .about-small .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  .about-small .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #services {
+    width: 100%;
+    margin-top: 60px;
+  }
+  #services h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #services .services-inner {
+    padding-top: 120px;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+  }
+  #services .services-inner .img-inner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+    margin-top: 40px;
+  }
+  #services .services-inner .img-inner img {
+    background-color: #742296;
+    border: 1px solid #742296;
+  }
+  #services .services-inner .img-inner .one {
+    background-image: url(../img/service.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50vh;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  #services .services-inner .img-inner .two {
+    background-image: url(../img/service.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    color: #fff;
+  }
+  #services .services-inner .img-inner .three {
+    background-image: url(../img/service\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+  }
+  #services .services-inner .overlay {
+    background-image: linear-gradient(rgba(18, 4, 4, 0), #000000);
+    width: 100%;
+    height: 50vh;
+  }
+  #services .services-inner .overlay img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #services .services-inner .overlay h3 {
+    padding-top: 362px;
+    font-size: 15px;
+  }
+  #services .services-inner .overlay .icon {
+    display: flex;
+    justify-content: end;
+  }
+  #services .services-inner .overlay .icon img {
+    border: 2px solid #742296;
+    background-color: #742296;
+    margin-bottom: 40px;
+  }
+  #services .services-inner .overlay .over {
+    background-color: #742296;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: all 0.5s ease-out;
+  }
+  #services .services-inner .overlay .over ul {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 30px;
+    line-height: 27px;
+    font-family: "josefinsansregular";
+  }
+  #services .services-inner .overlay .over ul h4 {
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: "josefinsanssemibold";
+  }
+  #services .services-inner .overlay .over.show {
+    right: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  #testimonials {
+    width: 100%;
+    margin-top: 120px;
+  }
+  #testimonials h2 {
+    font-family: "josefinsansbold";
+    font-size: 20px;
+  }
+  #testimonials .testimonials-inner {
+    height: 100vh;
+    font-family: "josefinsanslight";
+    color: var(--primary-color);
+  }
+  #testimonials .testimonials-inner .testimony {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 45px;
+    gap: 30px;
+  }
+  #testimonials .testimonials-inner .testimony h4 {
+    font-family: "josefinsanssemibold";
+    font-size: 25px;
+    margin-top: 70px;
+  }
+  #testimonials .testimonials-inner .testimony h5 {
+    font-family: "josefinsansregular";
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  #testimonials .testimonials-inner .testimony p {
+    font-family: "josefinsansregular";
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+  #testimonials .testimonials-inner .testimony .img-arrow {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 480px;
+  }
+  #testimonials .testimonials-inner .testimony .img-arrow img {
+    border: 2px solid #742296;
+    background: #742296;
+  }
+  #testimonials .testimonials-inner .testimony .inner {
+    background-image: url(../img/testimonials.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 65vh;
+  }
+  #testimonials .testimonials-inner .testimony .inner-one {
+    display: none;
+  }
+  #gallery {
+    width: 100%;
+    margin-top: 120px;
+  }
+  #gallery .gallery-inner {
+    color: var(--primary-color);
+  }
+  #gallery .gallery-inner .images {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 3px;
+    margin-top: 45px;
+  }
+  #gallery .gallery-inner .images .two {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images .four {
+    margin-top: 80px;
+  }
+  #gallery .gallery-inner .images .one {
+    display: none;
+  }
+  #gallery .gallery-inner .images .six {
+    display: none;
+  }
+  #gallery .gallery-inner .images img {
+    height: 25vh;
+    width: 120px;
+  }
+  #gallery .gallery-inner h4 {
+    font-family: "josefinsansbold";
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444);
+  }
+  #gallery .gallery-inner h4 span {
+    font-family: "greatvibes";
+    font-size: 38px;
+  }
+  #gallery .gallery-inner p {
+    font-family: "josefinsanssemibold";
+    text-align: center;
+    padding-top: 50px;
+  }
+  #gallery .gallery-inner .bn {
+    text-align: center;
+  }
+  #gallery .gallery-inner .bn .btn {
+    background-color: #742296;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 0;
+    font-family: "josefinsanssemibold";
+    font-size: 18px;
+  }
+  #gallery .gallery-inner .bn .btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #742296;
+  }
+  #footer {
+    width: 100%;
+    margin-top: 60px;
+    font-family: "josefinsansregular";
+    background-color: #742296;
+    color: #fff;
+  }
+  #footer .footer-inner .inner {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column;
+    margin-top: 45px;
+  }
+  #footer .footer-inner ul h4 {
+    text-decoration: underline;
+  }
+  #footer .footer-inner ul li {
+    line-height: 35px;
+    font-size: 15px;
+  }
+  #footer .footer-inner ul li img {
+    width: 150px;
+  }
+}/*# sourceMappingURL=style.css.map */

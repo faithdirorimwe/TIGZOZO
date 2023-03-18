@@ -1,0 +1,2753 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// ***************** BANNER ******************
+body {
+  background-color: var(--secondary-color);
+}
+
+:root {
+  --primary-color: #000106;
+  --secondary-color: #fff;
+  --shadow: 0px 7px 13px rgba(59, 58, 58, 0.1);
+  --background: linear-gradient(
+    to bottom, 
+    rgba(255, 255, 255, 0.057), 
+    rgba(255, 255, 255, 0.947));
+}
+
+.dark-theme {
+  --primary-color: #fff;
+  --secondary-color: #000106;
+  --shadow: 0px 7px 13px rgba(255, 255, 255, 0.179);
+  --background: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 0.057), 
+    rgba(0, 0, 0, 0.947));
+}
+ 
+
+@mixin p {
+  font-family: "josefinsansregular";
+  font-size: 15px;
+  line-height: 20px;
+  width: 80%;
+}
+
+@mixin h2 {
+  font-family: "josefinsansbold";
+  font-size: 20px;
+}
+
+@mixin btn{
+  background-color: #742296;
+  color: #fff;
+  margin-top: 30px;
+  border-radius: 0;
+  font-family: "josefinsanssemibold";
+  font-size: 18px;
+}
+
+@mixin button{
+  color: #000;
+        background-color: #fff;
+        border: 2px solid #742296;
+}
+
+
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+  .banner-small {
+    display: none;
+  }
+
+  .about-small {
+    display: none;
+  }
+
+  .navbar {
+    width: 100%;
+    font-family: "josefinsanssemibold";
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+    
+
+
+    a {
+      color: var(--primary-color);
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    a:hover {
+      color: #742296;
+    }
+
+
+    #icon {
+      width: 20px;
+      cursor: pointer;
+    }
+
+  }
+
+  #banner {
+    width: 100%;
+    margin-top: 200px;
+
+
+    .banner-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "josefinsansbold";
+      color: var(--primary-color);
+
+      .h1 {
+        font-size: 40px;
+        margin-top: 59px;
+
+      }
+
+      p {
+        font-family: "josefinsanssemibold";
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      .btn {
+        @include btn;
+      }
+
+      .btn:hover {
+       @include button
+      }
+
+      .home-links {
+        margin-top: 30px;
+        font-size: 18px;
+
+        a {
+          text-decoration: none;
+          color: var(--primary-color);
+          margin-left: 5px;
+          font-family: "josefinsanslight";
+        }
+
+        a:hover{
+          color: #742296;
+        }
+      }
+
+
+      .images {
+        img {
+          width: 23%;
+        }
+
+        .one {
+          padding-bottom: 20px;
+        }
+
+        .two {
+          margin-bottom: 70px;
+        }
+      }
+    }
+
+  }
+
+
+  #about {
+    width: 100%;
+    margin-top: 200px;
+
+
+
+    .about-inner {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "josefinsansbold";
+      color: var(--primary-color);
+      // margin-bottom:  10px;
+
+      .inner {
+        padding-left: 40px;
+      }
+
+      h2 {
+        @include h2
+      }
+
+      p {
+        @include p
+      }
+
+      .images {
+        margin-top: 40px;
+
+        .two {
+          padding-top: 135px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .image-one {
+        background-image: url(../img/about.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 90%;
+        height: 60vh;
+
+
+
+        .overlay {
+
+          background-color: #00000055;
+          height: 100%;
+          display: flex;
+          flex-flow: column;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+
+
+          img {
+            width: 50px;
+          }
+
+        }
+
+      }
+
+      .text {
+        padding-top: 50px;
+      }
+
+      .text-one {
+        padding-top: 20px;
+      }
+
+      .btn {
+        @include btn;
+
+      }
+
+      .btn:hover {
+        @include button;
+      }
+
+    }
+
+  }
+
+  #services {
+    width: 100%;
+    margin-top: 200px;
+
+
+    h2 {
+      @include h2
+    }
+
+    .services-inner {
+      height: 100vh;
+      padding-top: 120px;
+      font-family: "josefinsansbold";
+      color: var(--primary-color);
+
+      .img-inner {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 15px;
+        margin-top: 40px;
+
+        img {
+          background-color: #742296;
+          border: 5px solid #742296;
+
+        }
+
+
+        .one {
+          background-image: url(../img/service.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 30%;
+          height: 70vh;
+          position: relative;
+          text-align: center;
+          overflow-x: hidden;
+          color: #fff;
+
+        }
+
+        .two {
+          background-image: url(../img/service.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 30%;
+          height: 70vh;
+          text-align: center;
+          position: relative;
+          overflow-x: hidden;
+          color: #fff;
+
+        }
+
+        .three {
+          background-image: url(../img/service\ 2.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 30%;
+          height: 70vh;
+          text-align: center;
+          position: relative;
+          overflow-x: hidden;
+          color: #ffff;
+
+        }
+      }
+
+
+      .overlay {
+        background-image: linear-gradient(#12040400, #000000);
+        width: 100%;
+        height: 70vh;
+
+
+        img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+        }
+
+
+        h3 {
+          padding-top: 570px;
+
+
+        }
+
+        .icon {
+          display: flex;
+          justify-content: end;
+
+          img {
+            border: 2px solid #742296;
+            background-color: #742296;
+            margin-bottom: 40px;
+
+          }
+        }
+
+        .over {
+          background-color: #742296;
+          width: 100%;
+          height: 70vh;
+          position: absolute;
+          top: 0;
+          right: 100%;
+          transition: all .5s ease-out;
+
+
+
+          ul {
+            text-align: left;
+            padding-left: 30px;
+            padding-top: 30px;
+            line-height: 51px;
+            font-family: "josefinsansregular";
+
+
+
+
+            h4 {
+              padding-bottom: 20px;
+              font-size: 18px;
+              font-family: "josefinsanssemibold";
+
+            }
+
+          }
+
+          &.show {
+            right: 0;
+            transition: all .5s ease-in-out;
+          }
+
+        }
+      }
+
+    }
+  }
+
+
+  #testimonials {
+    width: 100%;
+    margin-top: 200px;
+
+
+    h2 {
+      @include h2
+    }
+
+    .testimonials-inner {
+      height: 100vh;
+      font-family: "josefinsanslight";
+      color: var(--primary-color);
+
+      .testimony {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        gap: 30px;
+
+
+        h4 {
+          font-family: "josefinsanssemibold";
+          font-size: 25px;
+          margin-top: 20px;
+        }
+
+        h5 {
+          font-family: "josefinsansregular";
+          font-size: 20px;
+          margin-top: 20px;
+        }
+
+        p {
+          font-family: "josefinsansregular";
+          font-size: 15px;
+          line-height: 20px;
+          width: 80%;
+
+        }
+
+
+        .img-arrow {
+          width: 100%;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          padding-top: 490px;
+
+          img {
+            border: 2px solid #742296;
+            background: #742296;
+
+          }
+        }
+
+
+        .inner {
+          background-image: url(../img/testimonials.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 60vh;
+
+
+        }
+
+        .inner-one {
+          margin-top: -130px;
+          background-image: url(../img/testimonials\ 1.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 60vh;
+
+
+        }
+
+      }
+
+    }
+  }
+
+  #gallery {
+    width: 100%;
+    height: 100vh;
+    margin-top: 200px;
+
+
+    .gallery-inner {
+      color: var(--primary-color);
+
+      .images {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 10px;
+        margin-top: 30px;
+
+        .two {
+          margin-top: 80px;
+        }
+
+        .four {
+          margin-top: 80px;
+        }
+
+        .six {
+          margin-top: 80px;
+        }
+
+        img {
+          height: 35vh;
+          width: 100%;
+        }
+      }
+
+      h4 {
+        font-family: "josefinsansbold";
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444);
+
+        span {
+          font-family: "greatvibes";
+          font-size: 38px;
+        }
+      }
+
+      p {
+        font-family: "josefinsanssemibold";
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .bn {
+        text-align: center;
+
+        .btn {
+         @include btn;
+        }
+
+        .btn:hover {
+         @include button;
+        }
+
+      }
+    }
+  }
+
+  #footer {
+    width: 100%;
+    // margin-top: 60px;
+    font-family: "josefinsansregular";
+    background-color: #742296;
+
+
+    .footer-inner {
+      color: #ffff;
+
+      .inner {
+        margin-top: 30px;
+      }
+
+      ul {
+        h4 {
+          text-decoration: underline;
+        }
+
+        li {
+          line-height: 35px;
+          font-size: 18px;
+
+        }
+      }
+    }
+  }
+}
+
+// large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+  .banner-small {
+    display: none;
+  }
+
+  .about-small {
+    display: none;
+  }
+
+  .navbar {
+    width: 100%;
+    font-family: "josefinsanssemibold";
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+    
+
+    a {
+      color: var(--primary-color);
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    a:hover {
+      color: #742296;
+    }
+
+
+    #icon {
+      width: 20px;
+      cursor: pointer;
+    }
+
+  }
+
+  #banner {
+    width: 100%;
+    margin-top: 150px;
+
+    .banner-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "josefinsansbold";
+      color: var(--primary-color);
+
+      .h1 {
+        font-size: 38px;
+        margin-top: 38px;
+
+      }
+
+      p {
+        font-family: "josefinsanssemibold";
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      .btn {
+        @include btn;
+      }
+
+      .btn:hover {
+       @include button;
+      }
+
+      .home-links {
+        margin-top: 30px;
+        font-size: 18px;
+
+        a {
+          text-decoration: none;
+          color: var(--primary-color);
+          margin-left: 5px;
+          font-family: "josefinsanslight";
+        }
+
+        a:hover{
+          color: #742296;
+        }
+      }
+
+      .images {
+        img {
+          width: 23%;
+        }
+
+        .one {
+          padding-bottom: 20px;
+        }
+
+        .two {
+          margin-bottom: 70px;
+        }
+      }
+    }
+
+  }
+
+
+  #about {
+    width: 100%;
+    margin-top: 150px;
+
+
+    .about-inner {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "josefinsansbold";
+      color: var(--primary-color);
+
+      .inner {
+        padding-left: 30px;
+      }
+
+      h2 {
+        @include h2
+      }
+
+      p {
+        @include p
+      }
+
+      .images {
+        margin-top: 40px;
+
+        .two {
+          padding-top: 83px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .image-one {
+        background-image: url(../img/about.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 90%;
+        height: 50vh;
+
+
+
+        .overlay {
+
+          background-color: #00000055;
+          height: 100%;
+          display: flex;
+          flex-flow: column;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+
+
+          img {
+            width: 50px;
+          }
+
+        }
+
+      }
+
+      .text {
+        padding-top: 50px;
+      }
+
+      .text-one {
+        padding-top: 20px;
+      }
+
+      .btn {
+       @include btn;
+
+      }
+
+      .btn:hover {
+        @include button
+      }
+
+    }
+
+  }
+
+  #services {
+    width: 100%;
+    margin-top: 60px;
+
+
+    h2 {
+      @include h2
+    }
+
+    .services-inner {
+      height: 100vh;
+      padding-top: 120px;
+      font-family: "josefinsansbold";
+      color: var(--primary-color);
+
+      .img-inner {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 15px;
+        margin-top: 40px;
+
+        img {
+          background-color: #742296;
+          border: 5px solid #742296;
+
+        }
+
+
+        .one {
+          background-image: url(../img/service.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 30%;
+          height: 70vh;
+          position: relative;
+          text-align: center;
+          overflow-x: hidden;
+          color: #fff;
+
+        }
+
+        .two {
+          background-image: url(../img/service.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 30%;
+          height: 70vh;
+          text-align: center;
+          position: relative;
+          overflow-x: hidden;
+          color: #fff;
+
+        }
+
+        .three {
+          background-image: url(../img/service\ 2.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 30%;
+          height: 70vh;
+          text-align: center;
+          position: relative;
+          overflow-x: hidden;
+          color: #ffff;
+
+        }
+      }
+
+
+      .overlay {
+        background-image: linear-gradient(#12040400, #000000);
+        width: 100%;
+        height: 70vh;
+
+
+        img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+        }
+
+
+        h3 {
+          padding-top: 576px;
+        
+
+
+        }
+
+        .icon {
+          display: flex;
+          justify-content: end;
+
+          img {
+            border: 2px solid #742296;
+            background-color: #742296;
+            margin-bottom: 40px;
+
+          }
+        }
+
+        .over {
+          background-color: #742296;
+          width: 100%;
+          height: 70vh;
+          position: absolute;
+          top: 0;
+          right: 100%;
+          transition: all .5s ease-out;
+
+
+
+          ul {
+            text-align: left;
+            padding-left: 30px;
+            padding-top: 30px;
+            line-height: 51px;
+            font-family: "josefinsansregular";
+
+
+
+
+            h4 {
+              padding-bottom: 20px;
+              font-size: 18px;
+              font-family: "josefinsanssemibold";
+
+            }
+
+          }
+
+          &.show {
+            right: 0;
+            transition: all .5s ease-in-out;
+          }
+
+        }
+      }
+
+    }
+  }
+
+
+  #testimonials {
+    width: 100%;
+    margin-top: 150px;
+
+    h2 {
+      @include h2
+    }
+
+    .testimonials-inner {
+      font-family: "josefinsanslight";
+      color: var(--primary-color);
+
+      .testimony {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        gap: 30px;
+
+
+        h4 {
+          font-family: "josefinsanssemibold";
+          font-size: 25px;
+          margin-top: 20px;
+        }
+
+        h5 {
+          font-family: "josefinsansregular";
+          font-size: 20px;
+          margin-top: 20px;
+        }
+
+        p {
+          font-family: "josefinsansregular";
+          font-size: 15px;
+          line-height: 20px;
+          width: 80%;
+
+        }
+
+
+        .img-arrow {
+          width: 100%;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          padding-top: 499px;
+
+          img {
+            border: 2px solid #742296;
+            background: #742296;
+
+          }
+        }
+
+
+        .inner {
+          background-image: url(../img/testimonials.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 60vh;
+
+
+        }
+
+        .inner-one {
+          margin-top: -169px;
+          background-image: url(../img/testimonials\ 1.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 60vh;
+
+
+        }
+
+      }
+
+    }
+  }
+
+  #gallery {
+    width: 100%;
+    margin-top: 400px;
+
+    .gallery-inner {
+      color: var(--primary-color);
+
+      .images {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 10px;
+        margin-top: 30px;
+
+        .two {
+          margin-top: 80px;
+        }
+
+        .four {
+          margin-top: 80px;
+        }
+
+        .six {
+          margin-top: 80px;
+        }
+
+        img {
+          height: 35vh;
+          width: 100%;
+        }
+      }
+
+      h4 {
+        font-family: "josefinsansbold";
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444);
+
+        span {
+          font-family: "greatvibes";
+          font-size: 38px;
+        }
+      }
+
+      p {
+        font-family: "josefinsanssemibold";
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .bn {
+        text-align: center;
+
+        .btn {
+         @include btn;
+        }
+
+        .btn:hover {
+        @include button;
+        }
+
+      }
+    }
+  }
+
+  #footer {
+    width: 100%;
+    margin-top: 60px;
+    font-family: "josefinsansregular";
+    background-color: #742296;
+    color: #fff;
+
+    .footer-inner {
+
+      .inner {
+        margin-top: 30px;
+      }
+
+      ul {
+        h4 {
+          text-decoration: underline;
+        }
+
+        li {
+          line-height: 35px;
+          font-size: 18px;
+
+        }
+      }
+    }
+  }
+}
+
+//  Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+  .banner-small {
+    display: none;
+  }
+
+  .about-small {
+    display: none;
+  }
+
+  .navbar {
+    width: 100%;
+    font-family: "josefinsanssemibold";
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+
+    a {
+      color: black;
+      margin-top: 10px;
+      font-size: 20px;
+      color: var(--primary-color);
+    }
+
+    a:hover {
+      color: #742296;
+    }
+
+
+    #icon {
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+
+  #banner {
+    width: 100%;
+    margin-top: 150px;
+
+    .banner-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "josefinsansbold";
+      color: var(--primary-color);
+
+
+      .h1 {
+        font-size: 28px;
+        margin-top: 42px;
+
+      }
+
+      p {
+        font-family: "josefinsanssemibold";
+        font-size: 20px;
+        line-height: 30px;
+        width: 100%;
+      }
+
+      .btn {
+       @include btn;
+      }
+
+      .btn:hover {
+       @include button
+      }
+
+
+      .home-links {
+        margin-top: 30px;
+        font-size: 13px;
+
+        a {
+          text-decoration: none;
+          color: var(--primary-color);
+          margin-left: 5px;
+          font-family: "josefinsanslight";
+        }
+
+        a:hover{
+          color: #742296;
+        }
+      }
+
+      p:hover{
+        color: #742296;
+      }
+
+      .images {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+
+
+        img {
+          width: 40%;
+        }
+
+        .two {
+          // margin-bottom: 70px;
+          display: none;
+        }
+      }
+    }
+
+  }
+
+
+  #about {
+    width: 100%;
+    margin-top: 150px;
+
+
+    .about-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "josefinsansbold";
+      margin-bottom: 10px;
+      color: var(--primary-color);
+
+      .inner {
+        margin-left: 40px;
+      }
+
+      h2 {
+        @include h2
+      }
+
+      p {
+        @include p
+      }
+
+      .images {
+        margin-top: 40px;
+
+        .two {
+          padding-top: 57px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .image-one {
+        background-image: url(../img/about.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 29vh;
+        margin-top: 50px;
+
+
+
+        .overlay {
+
+          background-color: #00000055;
+          height: 100%;
+          display: flex;
+          flex-flow: column;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+
+
+          img {
+            width: 50px;
+          }
+
+        }
+
+      }
+
+      .text {
+        padding-top: 50px;
+      }
+
+      .text-one {
+        padding-top: 20px;
+      }
+
+      .btn {
+        @include btn;
+
+      }
+
+      .btn:hover {
+        @include button
+      }
+
+    }
+
+  }
+
+  #services {
+    width: 100%;
+    margin-top: 80px;
+
+
+    h2 {
+      @include h2
+    }
+
+    .services-inner {
+      padding-top: 120px;
+      font-family: "josefinsansbold";
+      color: var(--primary-color);
+
+      .img-inner {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 15px;
+        margin-top: 40px;
+        
+
+        img {
+          background-color: #742296;
+          border: 5px solid #742296;
+          width: 10%;
+        }
+
+
+        .one {
+          background-image: url(../img/service.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 35%;
+          height: 50vh;
+          position: relative;
+          text-align: center;
+          overflow-x: hidden;
+          color: #fff;
+
+        }
+
+        .two {
+          background-image: url(../img/service.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 35%;
+          height: 50vh;
+          text-align: center;
+          position: relative;
+          overflow-x: hidden;
+          color: #fff;
+
+        }
+
+        .three {
+          background-image: url(../img/service\ 2.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 35%;
+          height: 50vh;
+          text-align: center;
+          position: relative;
+          overflow-x: hidden;
+          color: #ffff;
+
+        }
+      }
+
+
+      .overlay {
+        background-image: linear-gradient(#12040400, #000000);
+        width: 100%;
+        height: 50vh;
+
+
+        img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+        }
+
+
+        h3 {
+          font-size: 20px;
+          padding-top: 482px;
+
+
+        }
+
+        .icon {
+          display: flex;
+          justify-content: end;
+
+          img {
+            border: 2px solid #742296;
+            background-color: #742296;
+            margin-bottom: 40px;
+
+          }
+        }
+
+        .over {
+          background-color: #742296;
+          width: 100%;
+          height: 50vh;
+          position: absolute;
+          top: 0;
+          right: 100%;
+          transition: all .5s ease-out;
+
+
+
+          ul {
+            text-align: left;
+            padding-left: 20px;
+            padding-top: 20px;
+            line-height: 43px;
+            font-family: "josefinsansregular";
+
+
+
+
+            h4 {
+              padding-bottom: 20px;
+              font-size: 18px;
+              font-family: "josefinsanssemibold";
+
+            }
+
+          }
+
+          &.show {
+            right: 0;
+            transition: all .5s ease-in-out;
+          }
+
+        }
+      }
+
+    }
+  }
+
+
+  #testimonials {
+    width: 100%;
+    margin-top: 180px;
+
+    h2 {
+      @include h2
+    }
+
+    .testimonials-inner {
+      height: 100vh;
+      font-family: "josefinsanslight";
+      color: var(--primary-color);
+
+      .testimony {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 60px;
+        gap: 30px;
+
+
+        h4 {
+          font-family: "josefinsanssemibold";
+          font-size: 25px;
+          margin-top: -58px;
+        }
+
+        h5 {
+          font-family: "josefinsansregular";
+          font-size: 20px;
+          margin-top: 20px;
+        }
+
+        p {
+          font-family: "josefinsansregular";
+          font-size: 15px;
+          line-height: 20px;
+          width: 80%;
+
+        }
+
+
+        .img-arrow {
+          width: 100%;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          padding-top: 571px;
+
+          img {
+            border: 11px solid #742296;
+            background: #742296;
+
+          }
+        }
+
+
+        .inner {
+          background-image: url(../img/testimonials.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 50vh;
+
+          .img-arrow {
+            padding-top: 367px;
+          }
+
+
+        }
+
+        .inner-one {
+          margin-top: 181px;
+          background-image: url(../img/testimonials\ 1.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 60vh;
+
+          h4 {
+            margin-top: 40px;
+          }
+
+
+        }
+
+      }
+
+    }
+  }
+
+  #gallery {
+    width: 100%;
+    margin-top: 700px;
+
+    .gallery-inner {
+      color: var(--primary-color);
+
+      .images {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 5px;
+        margin-top: 50px;
+
+        .two {
+          margin-top: 80px;
+        }
+
+        .four {
+          margin-top: 80px;
+        }
+
+        .one {
+          display: none;
+        }
+
+        .six {
+          display: none;
+        }
+
+        img {
+          height: 30vh;
+          width: 120px;
+        }
+      }
+
+      h4 {
+        font-family: "josefinsansbold";
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444);
+
+        span {
+          font-family: "greatvibes";
+          font-size: 38px;
+        }
+      }
+
+      p {
+        font-family: "josefinsanssemibold";
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .bn {
+        text-align: center;
+
+        .btn {
+         @include btn;
+        }
+
+        .btn:hover {
+         @include button;
+        }
+      }
+    }
+  }
+
+  #footer {
+    width: 100%;
+    margin-top: 40px;
+    font-family: "josefinsansregular";
+    background-color: #742296;
+    color: #fff;
+
+    .footer-inner {
+
+      .inner {
+        margin-top: 30px;
+      }
+
+      img {
+        width: 120px;
+      }
+
+      ul {
+        h4 {
+          text-decoration: underline;
+          font-size: 20px;
+        }
+
+        li {
+          line-height: 30px;
+          font-size: 15px;
+
+        }
+      }
+    }
+  }
+
+}
+
+// Small devices (landscape phone, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+
+  #about {
+    display: none;
+  }
+
+  .navbar {
+    width: 100%;
+    font-family: "josefinsanssemibold";
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+
+    a {
+      color: black;
+      margin-top: 10px;
+      font-size: 15px;
+      color: var(--primary-color);
+    }
+
+    a:hover {
+      color: #742296;
+    }
+
+
+    #icon {
+      width: 15px;
+      cursor: pointer;
+    }
+  }
+
+  #banner {
+    display: none;
+  }
+
+  .banner-small {
+    width: 100%;
+    margin-top: 30px;
+    background: var(--background),
+    url(../img/hero\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+  
+
+    .banner-inner{
+      height: 100%;
+
+      .banner{
+        height: 100%;
+      }
+    }
+
+
+
+    .inner {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--primary-color);
+
+      .h1 {
+        font-size: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-family: "josefinsansbold";
+
+      }
+
+      p {
+        font-family: "josefinsanssemibold";
+        font-size: 16px;
+        line-height: 30px;
+        width: 80%;
+      }
+
+      .btn {
+       @include btn;
+      }
+
+      .btn:hover {
+      @include button;
+      }
+
+      .home-links {
+        margin-top: 30px;
+        font-size: 13px;
+
+        a {
+          text-decoration: none;
+          color: var(--primary-color);
+          margin-left: 5px;
+          font-family: "josefinsanslight";
+        }
+
+        a:hover{
+          color: #742296;
+        }
+      }
+    
+
+    }
+
+
+
+
+
+
+  }
+
+  .about-small {
+    width: 100%;
+    margin-top: 100px;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+
+    .inner {
+      padding-top: 40px;
+
+    }
+
+    p {
+      @include p
+    }
+
+    .image-one {
+      background-image: url(../img/about.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 60vh;
+
+
+
+      .overlay {
+
+        background-color: #00000055;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        // height: 100%;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+    }
+
+    .text-one {
+      padding-top: 30px;
+    }
+
+    .btn {
+     @include btn
+
+    }
+
+    .btn:hover{
+      @include button;
+    }
+
+  }
+
+
+  #services {
+    width: 100%;
+    margin-top: 60px;
+
+
+    h2 {
+      @include h2
+    }
+
+    .services-inner {
+      padding-top: 120px;
+      font-family: "josefinsansbold";
+      color: var(--primary-color);
+
+      .img-inner {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 15px;
+        margin-top: 40px;
+
+        img {
+          background-color: #742296;
+          border: 2px solid #742296;
+
+        }
+
+
+        .one {
+          background-image: url(../img/service.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 50vh;
+          position: relative;
+          text-align: center;
+          overflow-x: hidden;
+          color: #fff;
+
+        }
+
+        .two {
+          background-image: url(../img/service.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 50vh;
+          text-align: center;
+          position: relative;
+          overflow-x: hidden;
+          color: #fff;
+
+        }
+
+        .three {
+          background-image: url(../img/service\ 2.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 50vh;
+          text-align: center;
+          position: relative;
+          overflow-x: hidden;
+          color: #ffff;
+
+        }
+      }
+
+
+      .overlay {
+        background-image: linear-gradient(#12040400, #000000);
+        width: 100%;
+        height: 50vh;
+
+
+        img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+        }
+
+
+        h3 {
+          padding-top: 359px;
+          font-size: 15px;
+
+
+        }
+
+        .icon {
+          display: flex;
+          justify-content: end;
+
+          img {
+            border: 2px solid #742296;
+            background-color: #742296;
+            margin-bottom: 40px;
+
+          }
+        }
+
+        .over {
+          background-color: #742296;
+          width: 100%;
+          height: 50vh;
+          position: absolute;
+          top: 0;
+          right: 100%;
+          transition: all .5s ease-out;
+
+
+
+          ul {
+            text-align: left;
+            padding-left: 30px;
+            padding-top: 30px;
+            line-height: 23px;
+            font-size: 15px;
+            font-family: "josefinsansregular";
+
+
+
+
+            h4 {
+              padding-bottom: 20px;
+              font-size: 18px;
+              font-family: "josefinsanssemibold";
+
+            }
+
+          }
+          
+
+          &.show {
+            right: 0;
+            transition: all .5s ease-in-out;
+          }
+
+        }
+      }
+
+    }
+  }
+
+  #testimonials {
+    width: 100%;
+    margin-top: 120px;
+
+    h2 {
+      @include h2
+    }
+
+    .testimonials-inner {
+      font-family: "josefinsanslight";
+      color: var(--primary-color);
+
+
+      .testimony {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 40px;
+        gap: 30px;
+
+
+        h4 {
+          font-family: "josefinsanssemibold";
+          font-size: 25px;
+          margin-top: 70px;
+        }
+
+        h5 {
+          font-family: "josefinsansregular";
+          font-size: 20px;
+          margin-top: 20px;
+        }
+
+        p {
+          font-family: "josefinsansregular";
+          font-size: 15px;
+          line-height: 20px;
+          width: 80%;
+
+        }
+
+
+        .img-arrow {
+          width: 100%;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          padding-top: 483px;
+
+          img {
+            border: 2px solid #742296;
+            background: #742296;
+
+          }
+        }
+
+
+        .inner {
+          background-image: url(../img/testimonials.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 65vh;
+
+
+        }
+
+        .inner-one {
+          display: none;
+
+        }
+
+      }
+
+    }
+  }
+
+
+  #gallery {
+    width: 100%;
+    margin-top: 300px;
+
+    .gallery-inner {
+      color: var(--primary-color);
+
+      .images {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 3px;
+        margin-top: 40px;
+
+        .two {
+          margin-top: 80px;
+        }
+
+        .four {
+          margin-top: 80px;
+        }
+
+        .one {
+          display: none;
+        }
+
+        .six {
+          display: none;
+        }
+
+        img {
+          height: 30vh;
+          width: 120px;
+        }
+      }
+
+      h4 {
+        font-family: "josefinsansbold";
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444);
+
+        span {
+          font-family: "greatvibes";
+          font-size: 38px;
+        }
+      }
+
+      p {
+        font-family: "josefinsanssemibold";
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .bn {
+        text-align: center;
+
+        .btn {
+     @include btn;
+        }
+
+        .btn:hover{
+          @include button
+        }
+      }
+    }
+  }
+
+  #footer {
+    width: 100%;
+    margin-top: 60px;
+    font-family: "josefinsansregular";
+    background-color: #742296;
+    color: #fff;
+
+    .footer-inner {
+
+      .inner {
+        margin-top: 40px;
+        display: flex;
+        flex-flow: column;
+
+      }
+
+      ul {
+        h4 {
+          text-decoration: underline;
+        }
+
+        li {
+          line-height: 35px;
+          font-size: 18px;
+
+          img {
+            width: 150px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+
+  #about {
+    display: none;
+  }
+
+  .navbar {
+    width: 100%;
+    font-family: "josefinsanssemibold";
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+
+    .menuu{
+      background-color: var(--primary-color);
+    }
+
+    a {
+      color: #000;
+      margin-top: 10px;
+      font-size: 15px;
+      color: var(--primary-color);
+    }
+
+    a:hover {
+      color: #742296;
+    }
+
+
+
+    #icon {
+      width: 15px;
+      cursor: pointer;
+    }
+  }
+
+  #banner {
+    display: none;
+  }
+
+  .banner-small {
+   
+    width: 100%;
+    margin-top: 83px;
+    background: var(--background),
+    url(../img/hero\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+
+    .banner-inner{
+      height: 100%;
+
+      .banner{
+        height: 100%;
+      }
+    }
+
+
+
+    .inner {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--primary-color);
+
+      .h1 {
+        font-size: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-family: "josefinsansbold";
+
+      }
+
+      p {
+        font-family: "josefinsanssemibold";
+        font-size: 20px;
+        line-height: 30px;
+        width: 80%;
+      }
+
+      .btn {
+       @include btn;
+      }
+
+      .btn:hover {
+     @include button;
+      }
+
+      .home-links {
+        margin-top: 30px;
+        font-size: 13px;
+
+        a {
+          text-decoration: none;
+          color: var(--primary-color);
+          margin-left: 5px;
+          font-family: "josefinsanslight";
+        }
+
+        a:hover{
+          color: #742296;
+        }
+      }
+
+    }
+
+  }
+
+  .about-small {
+    width: 100%;
+    margin-top: 100px;
+    font-family: "josefinsansbold";
+    color: var(--primary-color);
+
+    p {
+      @include p
+    }
+
+    .image-one {
+      background-image: url(../img/about.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 60vh;
+      margin-top: 45px;
+
+
+
+      .overlay {
+
+        background-color: #00000055;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        // height: 100%;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+    }
+
+    .text-one {
+      padding-top: 30px;
+    }
+
+    .btn {
+@include btn;
+
+    }
+
+    .btn:hover{
+      @include button
+    }
+
+  }
+
+
+  #services {
+    width: 100%;
+    margin-top: 60px;
+
+
+    h2 {
+      @include h2
+    }
+
+    .services-inner {
+      padding-top: 120px;
+      font-family: "josefinsansbold";
+      color: var(--primary-color);
+
+      .img-inner {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 5px;
+        margin-top: 40px;
+
+        img {
+          background-color: #742296;
+          border: 1px solid #742296;
+
+        }
+
+
+        .one {
+          background-image: url(../img/service.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 50vh;
+          position: relative;
+          text-align: center;
+          overflow-x: hidden;
+          color: #fff;
+
+        }
+
+        .two {
+          background-image: url(../img/service.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 50vh;
+          text-align: center;
+          position: relative;
+          overflow-x: hidden;
+          color: #fff;
+
+        }
+
+        .three {
+          background-image: url(../img/service\ 2.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 50%;
+          height: 50vh;
+          text-align: center;
+          position: relative;
+          overflow-x: hidden;
+          color: #ffff;
+
+        }
+      }
+
+
+      .overlay {
+        background-image: linear-gradient(#12040400, #000000);
+        width: 100%;
+        height: 50vh;
+
+
+        img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+        }
+
+
+        h3 {
+          padding-top: 362px;
+          font-size: 15px;
+
+
+        }
+
+        .icon {
+          display: flex;
+          justify-content: end;
+
+          img {
+            border: 2px solid #742296;
+            background-color: #742296;
+            margin-bottom: 40px;
+
+          }
+        }
+
+        .over {
+          background-color: #742296;
+          width: 100%;
+          height: 50vh;
+          position: absolute;
+          top: 0;
+          right: 100%;
+          transition: all .5s ease-out;
+
+
+
+          ul {
+            text-align: left;
+            padding-left: 30px;
+            padding-top: 30px;
+            line-height: 27px;
+            font-family: "josefinsansregular";
+
+
+
+
+            h4 {
+              padding-bottom: 20px;
+              font-size: 18px;
+              font-family: "josefinsanssemibold";
+
+            }
+
+          }
+
+          &.show {
+            right: 0;
+            transition: all .5s ease-in-out;
+          }
+
+        }
+      }
+
+    }
+  }
+
+  #testimonials {
+    width: 100%;
+    margin-top: 120px;
+
+    h2 {
+      @include h2
+    }
+
+    .testimonials-inner {
+      height: 100vh;
+      font-family: "josefinsanslight";
+      color: var(--primary-color);
+
+      .testimony {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 45px;
+        gap: 30px;
+
+
+        h4 {
+          font-family: "josefinsanssemibold";
+          font-size: 25px;
+          margin-top: 70px;
+        }
+
+        h5 {
+          font-family: "josefinsansregular";
+          font-size: 20px;
+          margin-top: 20px;
+        }
+
+        p {
+          font-family: "josefinsansregular";
+          font-size: 15px;
+          line-height: 20px;
+          width: 80%;
+
+        }
+
+
+        .img-arrow {
+          width: 100%;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          padding-top: 480px;
+
+          img {
+            border: 2px solid #742296;
+            background: #742296;
+
+          }
+        }
+
+
+        .inner {
+          background-image: url(../img/testimonials.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 65vh;
+
+
+        }
+
+        .inner-one {
+          display: none;
+
+        }
+
+      }
+
+    }
+  }
+
+
+  #gallery {
+    width: 100%;
+    margin-top: 120px;
+
+    .gallery-inner {
+      color: var(--primary-color);
+
+      .images {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 3px;
+        margin-top: 45px;
+
+        .two {
+          margin-top: 80px;
+        }
+
+        .four {
+          margin-top: 80px;
+        }
+
+        .one {
+          display: none;
+        }
+
+        .six {
+          display: none;
+        }
+
+
+        img {
+          height: 25vh;
+          width: 120px;
+        }
+      }
+
+      h4 {
+        font-family: "josefinsansbold";
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444);
+
+        span {
+          font-family: "greatvibes";
+          font-size: 38px;
+        }
+      }
+
+      p {
+        font-family: "josefinsanssemibold";
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .bn {
+        text-align: center;
+
+        .btn {
+       @include btn;
+        }
+
+        .btn:hover{
+          @include button
+        }
+      }
+    }
+  }
+
+  #footer {
+    width: 100%;
+    margin-top: 60px;
+    font-family: "josefinsansregular";
+    background-color: #742296;
+    color: #fff;
+
+    .footer-inner {
+
+      .inner {
+        margin-top: 30px;
+        display: flex;
+        flex-flow: column;
+        margin-top: 45px;
+
+      }
+
+      ul {
+        h4 {
+          text-decoration: underline;
+        }
+
+        li {
+          line-height: 35px;
+          font-size: 15px;
+
+          img {
+            width: 150px;
+          }
+
+        }
+      }
+    }
+  }
+
+}
